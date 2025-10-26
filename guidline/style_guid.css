@@ -1,0 +1,10 @@
+#insertText {
+    white-space-collapse: preserve;
+    text-align: left;
+}
+html{
+    width: 100%;
+}
+body{
+    padding: 20px;
+}

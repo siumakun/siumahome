@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="/video_style.css">
+<div class="player" id="player">
+  <video id="video" playsinline autoplay></video>
+  <div id="loadingOverlay"></div>
+  <div id="startOverlay">
+    <button id="startButton"><i class="fa-solid fa-play"></i></button>
+  </div>
+
+    <div class="controls" id="controls">
+        <button id="playPause"><i class="fa-solid fa-play"></i></button>
+        <span id="currentTime">0:00</span>
+        <input class="range" type="range" id="seekBar" value="0" min="0" max="100" step="0.1">
+        <span id="duration">0:00</span>
+        <button id="muteBtn"><i id="muteIcon" class="fa-solid fa-volume-high"></i></button>
+        <input class="range" type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        <button id="fullscreen"><i class="fa-solid fa-expand"></i></button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="/hlsplayer.js"></script>

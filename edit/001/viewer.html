@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <meta name="robots" content="noindex">
+        <style>
+            *{
+                text-align: center;
+            }
+            .content {
+            display: none;
+            padding: 1em;
+            border: 1px solid #ccc;
+            margin-top: 1em;
+            }
+            .active {
+            display: block;
+            }
+            button {
+            margin-right: 0.5em;
+            }
+            model-viewer{
+                height: 75vh;
+                width: 100%;
+            }
+            button{
+                width: 10%;
+                height: 30px;
+                border-radius: 100px;
+            }
+            a{
+                cursor: pointer;
+            }
+            
+            @media screen and (max-width: 485px) {
+                .select_button{display: block ruby; width: 100%;}
+                button{width: 12%; font-size: 10px;}
+            }
+
+        </style>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    </head>
+    <body>
+         <div class="select_button">
+            <button onclick="showContent('content1')">刀</button>
+            <button onclick="showContent('content2')">術</button>
+            <button onclick="showContent('content3')">大砲</button>
+            <button onclick="showContent('content4')">弓</button>
+            <button onclick="showContent('content5')">重装</button>
+            <button onclick="showContent('content6')">槍</button>
+            <button onclick="showContent('content7')">短刀
+        </div>
+
+        </button>
+        <div class="main">     
+            <div id="content1" class="content active">
+                <model-viewer alt="3Dview" src="asetts/1.glb"ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <br>
+                <a target="_blank" rel="noopener noreferrer" style="text-decoration: none; background-color: darkblue; border-radius: 50px; color: white; padding: 10px;" href="https://siuma.booth.pm/items/6597825">ダウンロードはこちら</a>
+            </div>
+            <div id="content2" class="content">
+                <model-viewer alt="3Dview" src="asetts/2.glb"ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <br>
+                <a target="_blank" rel="noopener noreferrer" style="text-decoration: none; background-color: darkblue; border-radius: 50px; color: white; padding: 10px;" href="https://siuma.booth.pm/items/6662763">ダウンロードはこちら</a>
+            </div>
+            <div id="content3" class="content">
+                <model-viewer alt="3Dview" src="asetts/3.glb"ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <br>
+                <a target="_blank" rel="noopener noreferrer" style="text-decoration: none; background-color: darkblue; border-radius: 50px; color: white; padding: 10px;" href="https://siuma.booth.pm/items/6662747">ダウンロードはこちら</a>
+            </div>
+            <div id="content4" class="content">
+                <model-viewer alt="3Dview" src="asetts/4.glb"ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <br>
+                <a target="_blank" rel="noopener noreferrer" style="text-decoration: none; background-color: darkblue; border-radius: 50px; color: white; padding: 10px;" href="https://siuma.booth.pm/items/6662706">ダウンロードはこちら</a>
+            </div>
+            <div id="content5" class="content">
+                <model-viewer alt="3Dview" src="asetts/5.glb"ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <br>
+                <a target="_blank" rel="noopener noreferrer" style="text-decoration: none; background-color: darkblue; border-radius: 50px; color: white; padding: 10px;" href="https://siuma.booth.pm/items/6605917">ダウンロードはこちら</a>
+            </div>
+            <div id="content6" class="content">
+                <model-viewer alt="3Dview" src="asetts/6.glb"ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <br>
+                <a target="_blank" rel="noopener noreferrer" style="text-decoration: none; background-color: darkblue; border-radius: 50px; color: white; padding: 10px;" href="https://siuma.booth.pm/items/6605920">ダウンロードはこちら</a>
+            </div>
+            <div id="content7" class="content">
+                <model-viewer alt="3Dview" src="asetts/7.glb"ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <br>
+                <a target="_blank" rel="noopener noreferrer" style="text-decoration: none; background-color: darkblue; border-radius: 50px; color: white; padding: 10px;" href="https://siuma.booth.pm/items/6603986">ダウンロードはこちら</a>
+            </div>
+        </div>
+        <p>3Dviewer by ＜model-viewer＞</p>
+        <script>
+            function showContent(id) {
+            // すべてのコンテンツを非表示に
+            document.querySelectorAll('.content').forEach(el => {
+                el.classList.remove('active');
+            });
+            // 指定したIDのコンテンツを表示
+            document.getElementById(id).classList.add('active');
+            }
+        </script>
+
+    </body>
+</html>
+

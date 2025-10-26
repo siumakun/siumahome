@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <script src="pagetitle.js"></script>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style_guid.css">
+    </head>
+    <body>
+        <div id="insertText"></div>
+        <script>
+            fetch( "guidline.txt" ).then( res => res.text() ).then( text => {
+            document.getElementById( "insertText" ).textContent = text;
+            } );
+        </script>
+    </body>
+</html>

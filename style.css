@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=UoqMunThenKhung&display=swap');
+*{color: white; margin: 0; padding: 0; text-align: center; display: 0 auto; font-family: "UoqMunThenKhung", sans-serif; font-weight: 500; font-style: normal;}
+h3{color: #000;}
+a{width: fit-content; display:inline-block; text-decoration: none; color: #000;}
+.logo{height: 50px; border-radius: 10px; box-shadow: 0px 0px 15px -5px #3f3f3f;}
+div.s_link{padding-left: 10px; padding-right: 10px; width: 50px; display:inline-block;}
+div.d_link{padding-left: 10px; padding-right: 10px; width: 65px; display:inline-block;}
+h2{color: #000;}
+a:hover{opacity: 0.5;}
+.download_list{width: 70%; margin: 0 auto;}
+.content{display: flex; border: 1px solid #333333; border-radius: 20px; overflow: hidden;}
+.content_explanation{margin: 20px; width: 50%;}
+.content_image{ width: 50%; height: fit-content; box-shadow: 15px 0px 31px -5px #777777;}
+.button{background-color: darkblue; border-radius: 50px; box-shadow: 22px 18px 31px -5px #4d5557;}
+.download_other{width: fit-content; display: flex;}
+.download_part{border: 1px solid #7a7a7a; border-radius: 10px;width: 90%;display: block;margin:0 auto;}
+footer{background-color: #4d5557; color: white; border-top: 1px solid #000;}
+.link_text{color: rgb(228, 228, 228); padding: 20px; display: inline-block;}
+.Edit_complete,.Edit_now{width: 70%; margin: 0 auto;}
+.top_logo{height: 50px;}
+.menu-item {list-style: none; display: inline-block; padding: 10px;}
+#insertText{color: #000;}
+h1{color: #000;}
+p{color: #000;}
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+    .content{display: block;}
+    .content_image{ width: 100%;}
+    .content_explanation{width: 100%;margin:30px auto;}
+    div.d_link{padding-left: 5px; padding-right: 5px;}
+}
+@media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    div.d_link{padding-left: 10px; padding-right: 10px;}
+    .content{display: block;}
+    .content_explanation{width: 90%;}
+}
+@media screen and (max-width: 400px) {
+    /*細いスマホ用(400pxi以下)*/
+    .download_list{width: 90%;}
+    .content{display: block;}
+    .content_explanation{width: 100%; margin-left: 0; margin-right: 0;}
+    .download_other{display: flex;}
+    div.d_link{padding-left: 5px; padding-right: 5px;}
+}
+@media (prefers-color-scheme: dark) {
+    p{color: white;}
+    h2{color: #fff;}
+    html{background-color: #292929;}
+    .logo{background-color: rgb(255, 255, 255);}
+    .button{box-shadow: 15px 0px 31px -5px #000000;}
+    .content_image{box-shadow: 15px 0px 31px -5px #000000;}
+    .logo{box-shadow: 0px 0px 15px -5px #000000;}
+    .top_logo{filter: invert(80%);}
+    .download_part{border: 1px solid #c5c5c5;}
+    .content{border: 1px solid #bdbdbd;}
+    .button{background-color: rgb(59, 60, 68);}
+    h3{color: #ffffff;}
+    #insertText{color: #ffffff;}
+    h1{color: white;}
+}
+
+/*以下アニメーションのCSS*/
+body {animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;}
+@keyframes fadeIn {0% {opacity: 0;}100% {opacity: 1;}}

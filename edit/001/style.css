@@ -1,0 +1,66 @@
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.window {
+  width: 90%;
+  border: 2px solid #444;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  background-color: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+  touch-action: none; /* タッチ操作対応 */
+}
+
+.window-header {
+  background: linear-gradient(to bottom, #3d3d3d, #222222);
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  user-select: none;
+}
+
+.window-header:active {
+  cursor: grabbing;
+}
+
+.window-header .buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.window-header .button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+
+.window-body {
+  padding: 16px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+iframe{
+  width: 100%;
+  height: 80vh;
+}
+@media screen and (max-width: 480px){
+  .window{
+    max-width: 400px;
+  }
+  
+}
